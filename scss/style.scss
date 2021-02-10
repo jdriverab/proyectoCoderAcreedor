@@ -1,0 +1,316 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+
+@mixin organizacionVertical{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* *******GENERAL ********** */
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.estilo{
+    font-family: $fuente_principal;
+    font-size: medium;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $color_fuentePrincipal;
+}
+
+.estiloTitulo{
+    font-family: $fuente_principal;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color_fuentePrincipal;
+}
+
+.estiloLista{
+    font-family: $fuente_principal;
+    font-size: small;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $color_fuentePrincipal;
+}
+
+body {
+    @include organizacionVertical();
+}
+
+@keyframes anima {
+
+    0% {
+        transform: scale(1);
+
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+@media only screen and (min-width: 320px){
+
+    .cuerpoIntIns{
+
+        display:grid;
+        grid-template-areas:"carr"
+                            "textoInterno"
+                            "tabla"
+                            "proceso"
+                            "contacto";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 5px;
+    }
+
+    .textoFlex{
+        flex:100%
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    .cuerpoIntIns{
+
+        display:grid;
+        grid-template-areas:"carr carr tabla"
+                            "textoInterno textoInterno tabla"
+                            "proceso proceso tabla"
+                            "contacto contacto contacto";
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 5px;
+    }
+
+    .textoFlex{
+        flex:50%
+    }
+
+}
+
+@media only screen and (min-width: 1024px){
+
+    .cuerpoIntIns{
+        display:grid;
+        grid-template-areas:"carr carr carr tabla tabla"
+                            "textoInterno textoInterno textoInterno tabla tabla"
+                            "proceso proceso proceso tabla tabla"
+                            "contacto contacto contacto contacto contacto";
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 5px;
+    }
+
+    .textoFlex{
+        flex:50%
+    }
+
+}
+
+/*********************************** HEADER ******************/
+
+
+header{
+    height: 105px;
+    width: 100%;
+    margin: 0%;
+    background-repeat: repeat;
+    background-image: url(imagenheader.gif);
+    position: fixed;
+    @include organizacionVertical();
+    .headerCentral{
+        @include organizacionVertical();
+        height: 100%;
+        margin-left: 15%;
+        margin-right: 15%;
+        .iconoI{
+            align-items: flex-start;
+            width: 195px;
+            height: 50px;
+        }
+        .navBarr{
+            height: 30px;
+            width:auto;
+            margin-top: 20px;
+            align-items: flex-start;
+            ul {                
+                li{
+                    padding-right:1ch;
+                    ul{
+                        background-color:$color_background;  
+                    }              
+                }
+            }
+        }
+    }
+}
+
+/******************* BODY ********************/
+
+.botonesNav{
+    display:flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content: space-evenly;
+    height:30px;
+    margin-top:25px;
+    .boton{
+        background-color:gainsboro;
+        padding:5px;
+        text-align: justify;
+        display: inline-block;
+        font-size: 14px;
+    }
+}
+
+.carrousel{
+    grid-area:carr;
+}
+
+.contacto{
+    grid-area: contacto;
+    margin-top: 20px;
+    background-color: #D1F5E2;
+}
+
+/* clase en prueba */
+
+fieldset{
+    display:flex;
+    flex-direction: column;
+}
+
+/* ************************ */
+
+main{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top:110px;
+    width: auto;
+    @include organizacionVertical();
+    background-color: $color_background;
+    .cuerpoI{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: fit-content;
+        margin-top: 20px;
+        .cuerpoInt{
+            display:flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .textoI{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* este solo aplica para los hijos del textoI*/
+                div {
+                    padding-left: 1px;
+                    padding-right: 10px;
+                } 
+                .fotosI{
+                    flex:100%;
+                }
+            
+                // aqui iria el textoInterno pero se usa como clase en inscripcion y no tiene la misma direccion
+            }
+        }
+    }
+}
+
+.proceso{
+    grid-area: proceso;
+    height: 50px;
+    margin-top:5px;
+    @include organizacionVertical();
+    ul{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 30px;
+        padding-left: 0%;
+        width: auto;
+        padding-right: 1ch;
+        li{
+            display:inline-block;
+            text-align: center;
+            width: 50px;
+            img{
+                display:inline-block;
+                text-align: center;
+                width: 35px;
+            }
+            a{
+                display:inline-block;
+                text-align: center;
+                width: 35px;             
+           }
+           .anima:hover{
+            animation: anima 3s;
+            }  
+        }
+    }
+}
+
+.tablaCat{
+    grid-area: tabla;
+    table-layout: fixed;
+    margin-left:20px;
+    tr {
+        td{
+        width: 50%;
+        }
+    }
+}
+
+.textoInterno{
+    grid-area: textoInterno;
+    @include organizacionVertical();
+    align-content: center;
+    text-align: justify;
+    margin-top:8px;
+    justify-items: space-between;
+    padding-left: 3px;
+    padding-right: 3px;   
+}
+
+/**** FOOTER ********************/
+
+footer{
+
+    .footer{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top:1ch;
+        @include organizacionVertical();
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footerIns{
+        height: fit-content;
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top:40px;
+        @include organizacionVertical();
+        justify-content: center;
+        align-items: center;
+    }
+}
