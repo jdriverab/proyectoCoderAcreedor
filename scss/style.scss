@@ -77,8 +77,17 @@ body {
         grid-column-gap: 5px;
     }
 
-    .textoFlex{
-        flex:100%
+    .textoFlex50{
+        flex:100%;
+    }
+
+    .textoFlex25{
+        flex: 100%;
+    }
+
+    .boton{
+        display:block;
+        margin:0.2em auto;
     }
 
 }
@@ -97,8 +106,12 @@ body {
         grid-column-gap: 5px;
     }
 
-    .textoFlex{
-        flex:50%
+    .textoFlex50{
+        flex:50%;
+    }
+
+    .textoFlex25{
+        flex: 50%;
     }
 
 }
@@ -117,7 +130,11 @@ body {
     }
 
     .textoFlex{
-        flex:50%
+        flex:50%;
+    }
+
+    .textoFlex25{
+        flex: 25%;
     }
 
 }
@@ -132,6 +149,7 @@ header{
     background-repeat: repeat;
     background-image: url(imagenheader.gif);
     position: fixed;
+    z-index: 9999;
     @include organizacionVertical();
     .headerCentral{
         @include organizacionVertical();
@@ -148,7 +166,7 @@ header{
             width:auto;
             margin-top: 20px;
             align-items: flex-start;
-            ul {                
+            ul {               
                 li{
                     padding-right:1ch;
                     ul{
@@ -166,15 +184,37 @@ header{
     display:flex;
     flex-direction:row;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height:30px;
-    margin-top:25px;
+    margin-top:45px;
+    margin-bottom: 35px;
+    padding:1px;
     .boton{
-        background-color:gainsboro;
-        padding:5px;
-        text-align: justify;
-        display: inline-block;
-        font-size: 14px;
+        // background-color:gainsboro;
+        // padding:5px;
+        // text-align: justify;
+        // display: inline-block;
+        // font-size: 14px;
+
+        width: 130px;
+        height: 35px;
+
+         display:inline-block;
+         padding:10px;
+         margin:10px;
+         border-radius:50%;
+         box-sizing: border-box;
+         text-decoration:none;
+         font-family:$fuente_principal;
+         font-weight:300;
+         color:#FFFFFF;
+         background-color:whitesmoke;
+         text-align:center;
+         transition: all 0.2s;
+    }
+
+    .boton:hover {
+        background-color:$color_background;
     }
 }
 
@@ -200,7 +240,7 @@ fieldset{
 main{
     margin-left: 15%;
     margin-right: 15%;
-    margin-top:110px;
+    margin-top:105px;
     width: auto;
     @include organizacionVertical();
     background-color: $color_background;
@@ -218,7 +258,6 @@ main{
                 display:flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                /* este solo aplica para los hijos del textoI*/
                 div {
                     padding-left: 1px;
                     padding-right: 10px;
@@ -236,7 +275,7 @@ main{
 .proceso{
     grid-area: proceso;
     height: 50px;
-    margin-top:5px;
+    margin-top:35px;
     @include organizacionVertical();
     ul{
         display:flex;
@@ -283,7 +322,7 @@ main{
     @include organizacionVertical();
     align-content: center;
     text-align: justify;
-    margin-top:8px;
+    margin-top:30px;
     justify-items: space-between;
     padding-left: 3px;
     padding-right: 3px;   
@@ -297,7 +336,7 @@ footer{
         width: 100%;
         margin-right: auto;
         margin-left: auto;
-        margin-top:1ch;
+        margin-top:40px;
         @include organizacionVertical();
         justify-content: center;
         align-items: center;

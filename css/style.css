@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7437,8 +7438,13 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-column-gap: 5px; }
-  .textoFlex {
-    flex: 100%; } }
+  .textoFlex50 {
+    flex: 100%; }
+  .textoFlex25 {
+    flex: 100%; }
+  .boton {
+    display: block;
+    margin: 0.2em auto; } }
 
 @media only screen and (min-width: 768px) {
   .cuerpoIntIns {
@@ -7447,7 +7453,9 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 5px; }
-  .textoFlex {
+  .textoFlex50 {
+    flex: 50%; }
+  .textoFlex25 {
     flex: 50%; } }
 
 @media only screen and (min-width: 1024px) {
@@ -7458,7 +7466,9 @@ body {
     grid-template-rows: auto;
     grid-column-gap: 5px; }
   .textoFlex {
-    flex: 50%; } }
+    flex: 50%; }
+  .textoFlex25 {
+    flex: 25%; } }
 
 /*********************************** HEADER ******************/
 header {
@@ -7468,6 +7478,7 @@ header {
   background-repeat: repeat;
   background-image: url(imagenheader.gif);
   position: fixed;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; }
@@ -7497,15 +7508,28 @@ header {
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 30px;
-  margin-top: 25px; }
+  margin-top: 45px;
+  margin-bottom: 35px;
+  padding: 1px; }
   .botonesNav .boton {
-    background-color: gainsboro;
-    padding: 5px;
-    text-align: justify;
-    display: inline-block;
-    font-size: 14px; }
+    width: 130px;
+    height: 35px;
+     display: inline-block;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 50%;
+     box-sizing: border-box;
+     text-decoration: none;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 300;
+     color: #FFFFFF;
+     background-color: whitesmoke;
+     text-align: center;
+     transition: all 0.2s; }
+  .botonesNav .boton:hover {
+    background-color: #EFF5F3; }
 
 .carrousel {
   grid-area: carr; }
@@ -7524,7 +7548,7 @@ fieldset {
 main {
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 110px;
+  margin-top: 105px;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -7543,8 +7567,7 @@ main {
       main .cuerpoI .cuerpoInt .textoI {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        /* este solo aplica para los hijos del textoI*/ }
+        flex-wrap: wrap; }
         main .cuerpoI .cuerpoInt .textoI div {
           padding-left: 1px;
           padding-right: 10px; }
@@ -7554,7 +7577,7 @@ main {
 .proceso {
   grid-area: proceso;
   height: 50px;
-  margin-top: 5px;
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; }
@@ -7595,7 +7618,7 @@ main {
   flex-wrap: nowrap;
   align-content: center;
   text-align: justify;
-  margin-top: 8px;
+  margin-top: 30px;
   justify-items: space-between;
   padding-left: 3px;
   padding-right: 3px; }
@@ -7605,7 +7628,7 @@ footer .footer {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1ch;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
