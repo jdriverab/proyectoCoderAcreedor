@@ -90,6 +90,12 @@ body {
         margin:0.2em auto;
     }
 
+    .proceso ul {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
 }
 
 @media only screen and (min-width: 768px){
@@ -114,6 +120,12 @@ body {
         flex: 50%;
     }
 
+    .proceso ul {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
 }
 
 @media only screen and (min-width: 1024px){
@@ -135,6 +147,12 @@ body {
 
     .textoFlex25{
         flex: 25%;
+    }
+
+    .proceso ul {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
 }
@@ -185,36 +203,27 @@ header{
     flex-direction:row;
     align-content: center;
     justify-content: space-around;
-    height:30px;
     margin-top:45px;
     margin-bottom: 35px;
     padding:1px;
     .boton{
-        // background-color:gainsboro;
-        // padding:5px;
-        // text-align: justify;
-        // display: inline-block;
-        // font-size: 14px;
 
-        width: 130px;
-        height: 35px;
-
-         display:inline-block;
-         padding:10px;
-         margin:10px;
-         border-radius:50%;
-         box-sizing: border-box;
-         text-decoration:none;
-         font-family:$fuente_principal;
-         font-weight:300;
-         color:#FFFFFF;
-         background-color:whitesmoke;
-         text-align:center;
-         transition: all 0.2s;
+        width: 105px;
+        height: 105px;
+        display:inline-block;
+        border-radius:50%;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:$fuente_principal;
+        font-weight:300;
+        color:$color_fuentePrincipal2;
+        background-color:$color_background2;
+        text-align:center;
+        transition: all 0.2s;
     }
 
     .boton:hover {
-        background-color:$color_background;
+        background-color:$color_background3;
     }
 }
 
@@ -228,14 +237,10 @@ header{
     background-color: #D1F5E2;
 }
 
-/* clase en prueba */
-
 fieldset{
     display:flex;
     flex-direction: column;
 }
-
-/* ************************ */
 
 main{
     margin-left: 15%;
@@ -254,6 +259,7 @@ main{
             display:flex;
             flex-direction: column;
             flex-wrap: nowrap;
+            height: fit-content;
             .textoI{
                 display:flex;
                 flex-direction: row;
@@ -264,9 +270,9 @@ main{
                 } 
                 .fotosI{
                     flex:100%;
+                    width: 100%;
+                    max-height: 400px;
                 }
-            
-                // aqui iria el textoInterno pero se usa como clase en inscripcion y no tiene la misma direccion
             }
         }
     }
@@ -274,30 +280,35 @@ main{
 
 .proceso{
     grid-area: proceso;
-    height: 50px;
+    height: fit-content;
     margin-top:35px;
-    @include organizacionVertical();
-    ul{
-        display:flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        height: 30px;
+    width: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // @include organizacionVertical();
+    ul{    
+        height: 100%;
+        width: 100%;
+        max-width: 35px;
         padding-left: 0%;
-        width: auto;
-        padding-right: 1ch;
         li{
             display:inline-block;
+            float:left;
             text-align: center;
-            width: 50px;
+            height: 100%;
+            max-height: 50px;
             img{
                 display:inline-block;
                 text-align: center;
-                width: 35px;
+                height: 100%;
+                max-height: 35px;
             }
             a{
                 display:inline-block;
                 text-align: center;
-                width: 35px;             
+                height: 100%;
+                max-height: 35px;             
            }
            .anima:hover{
             animation: anima 3s;
@@ -327,8 +338,6 @@ main{
     padding-left: 3px;
     padding-right: 3px;   
 }
-
-/**** FOOTER ********************/
 
 footer{
 

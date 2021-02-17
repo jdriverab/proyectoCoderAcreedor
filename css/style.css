@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7444,7 +7443,11 @@ body {
     flex: 100%; }
   .boton {
     display: block;
-    margin: 0.2em auto; } }
+    margin: 0.2em auto; }
+  .proceso ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; } }
 
 @media only screen and (min-width: 768px) {
   .cuerpoIntIns {
@@ -7456,7 +7459,11 @@ body {
   .textoFlex50 {
     flex: 50%; }
   .textoFlex25 {
-    flex: 50%; } }
+    flex: 50%; }
+  .proceso ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; } }
 
 @media only screen and (min-width: 1024px) {
   .cuerpoIntIns {
@@ -7468,7 +7475,11 @@ body {
   .textoFlex {
     flex: 50%; }
   .textoFlex25 {
-    flex: 25%; } }
+    flex: 25%; }
+  .proceso ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; } }
 
 /*********************************** HEADER ******************/
 header {
@@ -7509,27 +7520,24 @@ header {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  height: 30px;
   margin-top: 45px;
   margin-bottom: 35px;
   padding: 1px; }
   .botonesNav .boton {
-    width: 130px;
-    height: 35px;
-     display: inline-block;
-     padding: 10px;
-     margin: 10px;
-     border-radius: 50%;
-     box-sizing: border-box;
-     text-decoration: none;
-     font-family: Arial, Helvetica, sans-serif;
-     font-weight: 300;
-     color: #FFFFFF;
-     background-color: whitesmoke;
-     text-align: center;
-     transition: all 0.2s; }
+    width: 105px;
+    height: 105px;
+    display: inline-block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: black;
+    background-color: whitesmoke;
+    text-align: center;
+    transition: all 0.2s; }
   .botonesNav .boton:hover {
-    background-color: #EFF5F3; }
+    background-color: gray; }
 
 .carrousel {
   grid-area: carr; }
@@ -7539,12 +7547,10 @@ header {
   margin-top: 20px;
   background-color: #D1F5E2; }
 
-/* clase en prueba */
 fieldset {
   display: flex;
   flex-direction: column; }
 
-/* ************************ */
 main {
   margin-left: 15%;
   margin-right: 15%;
@@ -7563,7 +7569,8 @@ main {
     main .cuerpoI .cuerpoInt {
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap; }
+      flex-wrap: nowrap;
+      height: fit-content; }
       main .cuerpoI .cuerpoInt .textoI {
         display: flex;
         flex-direction: row;
@@ -7572,35 +7579,36 @@ main {
           padding-left: 1px;
           padding-right: 10px; }
         main .cuerpoI .cuerpoInt .textoI .fotosI {
-          flex: 100%; }
+          flex: 100%;
+          width: 100%;
+          max-height: 400px; }
 
 .proceso {
   grid-area: proceso;
-  height: 50px;
+  height: fit-content;
   margin-top: 35px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap; }
+  width: 100%; }
   .proceso ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 30px;
-    padding-left: 0%;
-    width: auto;
-    padding-right: 1ch; }
+    height: 100%;
+    width: 100%;
+    max-width: 35px;
+    padding-left: 0%; }
     .proceso ul li {
       display: inline-block;
+      float: left;
       text-align: center;
-      width: 50px; }
+      height: 100%;
+      max-height: 50px; }
       .proceso ul li img {
         display: inline-block;
         text-align: center;
-        width: 35px; }
+        height: 100%;
+        max-height: 35px; }
       .proceso ul li a {
         display: inline-block;
         text-align: center;
-        width: 35px; }
+        height: 100%;
+        max-height: 35px; }
       .proceso ul li .anima:hover {
         animation: anima 3s; }
 
@@ -7623,7 +7631,6 @@ main {
   padding-left: 3px;
   padding-right: 3px; }
 
-/**** FOOTER ********************/
 footer .footer {
   width: 100%;
   margin-right: auto;
