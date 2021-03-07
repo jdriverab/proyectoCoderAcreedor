@@ -1,9 +1,26 @@
 $color_fuentePrincipal: black;
 $color_fuentePrincipal2: black; // usado en colores especiales de botones
 $fuente_principal: Arial, Helvetica, sans-serif;
+
+$tamaño_fuente:13px;
+$tamaño_fuente_titulos:17px;
+$tamaño_fuente_nav: 15px;
+
+$alto_maximo_textos_index: 400px;
+
+$color_background_footer: #aFF8F3;
+$color_background_form_inscripcion: WHITESMOKE;
+$color_background_tabla: white;
 $color_background:#EFF5F3; // fondos de pagina
-$color_background2: whitesmoke; // fondos de botones
+$color_background2: WHITESMOKE; // fondos de botones
 $color_background3: gray; // fondo de botones con hoover
 
 
-$nav-link-color: $color_fuentePrincipal;
+$color_botones: #2C59E7;
+$color_botones2: #23395e; // sombras de los textos y borde de boton
+$color_botones_transicion: #2C59E7; // cambia a este color al pasar por encima con puntero
+$color_borde_listaTextos: gray;
+
+
+$nav-link-color: $color_fuentePrincipal; // Para darle color al menu del bootstrap
+$nav-link-font-size: $tamaño_fuente_nav; // Pära darle el tamaño a la letra de la barra NAV

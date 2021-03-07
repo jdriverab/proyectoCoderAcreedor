@@ -13,38 +13,52 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>Inscripcion</title>
-
 </head>
 
 <body>
+
 	<header class="estilo">
         <div class="headerCentral">
-        
-            <div class="iconoI">
-                <img src="../Img/logoSodimac.gif" alt="Boton home, logo empresarial Sodimac casita">
-            </div> 
 
-            <nav class="navBarr">
+            <div class="headerCentralSuperior">
+        
+                <div class="iconoHeaderI">
+                    <a href="../index.html"><img src="../Img/logoSodimac.jpg" alt="Boton home, logo empresarial Sodimac casita"></a>
+                </div> 
+
+                <div class="botonesNav">
+                    <input class="boton ocultoResponsive" type="button" name="Compra" value="Sodimac.com">             
+                    <input class="boton" type="button" name="Proveedor" value="Proveedores">         
+                </div>
+
+            </div>
+
+            <nav class="navBarr estilo">
                 <ul class="nav">
-                    <li class="nav-item">
+                    <li class="nav-item ocultoResponsive">
                         <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" aria-current="page">Seleccion acreedores</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="../index.html">¿Que es un acreedor?</a></li>
-                            <li><a class="dropdown-item" href="seleccion.html">Participacion y seleccion</a></li>
-                            <li><a class="dropdown-item" href="compra.html">Proceso de compra</a></li>
-                            <li><a class="dropdown-item" href="ejecucion.html">Ejecucion de trabajos</a></li>
+                            <li><a class="dropdown-item" href="comoParticipar.html">Participacion y seleccion</a></li>
+                            <li><a class="dropdown-item" href="comoParticipar.html">Compra y ejecucion</a></li>
                             <li><a class="dropdown-item" href="inscripcion.html">Inscripcion</a></li>
                         </ul>
                     </li>
-                    
+                    <li class="nav-item ocultoResponsive">
+                        <a class="nav-link active" aria-current="page" href="comoParticipar.html">¿Como participar?</a>
+                    </li>
+
+                    <li class="nav-item ocultoResponsive">
+                        <a class="nav-link active" aria-current="page" href="inscripcion.html">Inscripcion</a>
+                    </li>                  
                 </ul>
             </nav>
         </div>
     </header>
-    
+
     <main>
         <div class="cuerpoI">            
             <div class="cuerpoIntIns">   
@@ -72,9 +86,8 @@
 
                 <div class="textoInterno">
                     <h1 class="estiloTitulo">EJECUCION DE TRABAJOS Y TIEMPOS</h1>
-                    <p class="estilo">Todos los trabajos se cotizan segun las necesidades de la compañia y segun requerimientos de nuestros equipos, estos pueden ser para prestar servicios,
-                        fabricar o hasta instalar exhibiciones por lo tanto siempre se trabajara en conjunto para definir plazos y programaciones.
-
+                    <p class="estilo">
+                        Actualmente buscamos proveedores que esten establecidos a lo largo de chile para fabricar y prestar servicios asociados a las mantenciones antes indicadas, en caso de estar interesados por favor llenar el formulario de inscripcion con el cual nos podremos comunicar con su empresa y conocerlos mas para participar de nuestros procesos.
                         En la columna a continuacion se indican las materialidades que mas trabajamos.
                     </p>
                 </div>
@@ -86,7 +99,7 @@
                         
                     <tr>
                         <th scope="col">Familia</th>
-                        <th scope="col">Materialidades (segun importancia)</th>
+                        <th scope="col">Materialidades</th>
                     </tr>
 
                     <tr>
@@ -157,30 +170,35 @@
                 </table>       
 
                 <div class="proceso">
-                    <ul>
+                    <h2>Nuestro proceso</h2>
+                    <ul class="listaProceso">
                         <li>
-                            <a class="anima" href="../index.html"><img src="../Img/circulo1.png" alt="proceso inicial"></a>
-                            <h2 class="estiloLista">Inicio</h2>
+                            <a class="anima iconos" href="../index.html"><img src="../Img/circulo1.png" alt="proceso inicial"></a>
+                            <h2 class="estiloLista">Home</h2>
                         </li>
                         <li>
                             <img src="../Img/flecha.png" alt="proceso adquisicion">
                         </li>
-                        <li>
-                           <a class="anima" href="seleccion.html"><img src="../Img/circulo1.png" alt="proceso licitacion"></a>
-                           <h2 class="estiloLista">Propuesta& Seleccion</h2>
+                        <li  class="mostrarResponsiveIns">
+                            <a class="anima" href="comoParticipar.html"><img src="../Img/circulo1.png" alt="proceso de orden de compra y condiciones"></a>
+                            <h2 class="estiloLista">¿Nuestro proceso?</h2>
                         </li>
-                        <li>
+                        <li class="ocultoResponsiveIns">
+                        <a class="anima" href="comoParticipar.html"><img src="../Img/circulo1.png" alt="proceso licitacion"></a>
+                        <h2 class="estiloLista">Seleccion</h2>
+                        </li>
+                        <li class="ocultoResponsiveIns">
                             <img src="../Img/flecha.png" alt="proceso adquisicion">
                         </li>
-                        <li>
-                            <a class="anima" href="compra.html"><img src="../Img/circulo1.png" alt="proceso de orden de compra y condiciones"></a>
+                        <li class="ocultoResponsiveIns">
+                            <a class="anima" href="comoParticipar.html"><img src="../Img/circulo1.png" alt="proceso de orden de compra y condiciones"></a>
                             <h2 class="estiloLista">Compras</h2>
                         </li>
-                        <li>
+                        <li class="ocultoResponsiveIns">
                             <img src="../Img/flecha.png" alt="proceso adquisicion">
                         </li>
-                        <li>
-                            <a class="anima" href="ejecucion.html"><img src="../Img/circulo1.png" alt="proceso de ejecucion de trabajos"></a>
+                        <li class="ocultoResponsiveIns">
+                            <a class="anima" href="comoParticipar.html"><img src="../Img/circulo1.png" alt="proceso de ejecucion de trabajos"></a>
                             <h2 class="estiloLista">Ejecucion</h2>
                         </li>
                         <li>
@@ -193,36 +211,58 @@
                     </ul>
                 </div>
 
-                <div class="contacto">
-                    <form>
-                        <fieldset>
-                            <legend>Formulario de inscripcion</legend>
-                            
-                            <div class="textoI"> <!-- Menu con checkbox para identificar si es persona natural o juridica -->
-                                <div>
-                                    <label for="persona">Persona natural</label> 
-                                    <input type="radio" name="persona" value="natural">
-                                </div>
-                                
-                                <div>
-                                    <label for="persona">Persona juridica</label>
-                                    <input type="radio" name="persona" value="juridica">
-                                </div>
+                    
+                <form class="row g-3 contacto">
+                    <fieldset class="row g-3">
+                        <legend>Formulario de inscripcion</legend>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridCheck" type="radio" name="persona" value="natural">
+                                <label class="form-check-label" for="persona">
+                                    Persona natural
+                                </label>
                             </div>
-                            
-                            <label for="nombreContacto">Nombre y apellidos del contacto</label>
-                            <input type="textarea" name="nombreContacto">
-                            <label for="Telefono"> Telefono</label>
-                            <input type="textarea" name="telefono" placeholder="+56 x-xxxx xxxx">
-                            <label for="correo">Correo</label>
-                            <input type="email" name="correo" placeholder="contacto@empresa.cl">
-                            <label for="razonSocial">Razon social</label>
-                            <input type="textarea" name="razonSocial">
-                            <label for="rut">Rut empresa</label>
-                            <input type="textarea" name="rut" placeholder="xx.xxx.xxx-x">
-                            
-                            <label for="rubro">Rubro</label>
-                            <select name="rubro">
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" id="gridCheck" type="radio" name="persona" value="natural">
+                                <label class="form-check-label" for="persona">
+                                    Persona juridica
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <label for="nombreContacto" class="form-label">Nombre y apellidos del contacto</label>
+                            <input type="textarea" class="form-control" name="nombreContacto">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="textarea" class="form-control" name="telefono" placeholder="+56 x-xxxx xxxx">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="correo" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="correo" placeholder="contacto@empresa.cl">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="razonSocial" class="form-label">Razon social</label>
+                            <input type="textarea" class="form-control" name="razonSocial" placeholder="77.xxx.xxx-k">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="rut" class="form-label">Rut empresa</label>
+                            <input type="textarea" class="form-control" name="rut" placeholder="xx.xxx.xxx-x">
+                        
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="rubro" class="form-label">Rubro que trabaja</label>
+                            <select name="rubro" class="form-select">
                                 <optgroup label="servicios">
                                     <option name="servicios" value="inst">Instalaciones</option>
                                     <option name="servicios" value="mdo">Mano de obra general</option>
@@ -240,36 +280,54 @@
                                     <option name="fabricaciones" value="mic">Micromerchandising</option>
                                 </optgroup>
                             </select>
+                        </div>
 
-                            <div class="mb-3 botones">
-                                <label for="formFile" class="form-label">Adjunte su documento aqui</label>
-                                <input class="form-control" type="file" id="formFile">
+                        <div class="col-md-6">
+                            <label for="ciudad" class="form-label">Ciudad</label>
+                            <input type="text" class="form-control" name="ciudad">
+                        </div>
+
+                        <div class="col-6">
+                            <input class="form-check-input" name="puedeInstalar" type="radio" value="instala">
+                            <label class="form-check-label" for="puedeInstalar">
+                                En caso de ser fabricante, ¿puede instalar?
+                            </label>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <label class="form-label" for="materialidadesOfrecidas"></label>
+                                    Materialidades que ofrece (en caso de no estar indicadas mas arriba)
+                                </label>
+                                <input class="form-control" name="materialidadesOfrecidas" type="textarea" placeholder="Por favor indicar materialidades especiales">                              
                             </div>
-                            
-                            <label for="puedeInst">En caso de ser fabricante, considera instalaciones?</label>
-                            <input type="checkbox" name="puedeInst" value="siinst">
+                        </div>                        
 
-                            <label for="nombreContacto">Materialidad ofrecida</label>
-                            <input type="textarea" name="nombreContacto" placeholder="Escriba aqui las materialidades que puede ofrecer">
-                            <div class="botonesNav">
-                                <input type="reset" name="restablecerDatos" value="reset">
-                                <input type="submit" name="enviar" value="Enviar">
-                            </div>
+                        <div class="mb-12 botones">
+                            <label for="formFile" class="form-label">Adjunte su brochure</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
 
-                        </fieldset>
-                    </form>
-                </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Enviar informacion</button>
+                        </div>
+                    </fieldset>              
+                </form>
             </div>
         </div>
-
     </main>
     
     <footer>
-
-        <div id="footerIns">
-            <h3>SODIMAC - LA CASA DE TODOS</h2>
-            <img src="../Img/iconoinsta.png" alt="Icono instagram" width="52px">
-        </div>
+        <div class="estiloFooter estiloLista">
+            <h3>Siguenos en</h2>
+            <div class="redSociales">
+                <a href=""><img src="../Img/iconoinsta.png" alt="Icono instagram"></a>
+                <a href=""><img src="../Img/iconoinsta.png" alt="Icono instagram"></a>
+                <a href=""><img src="../Img/iconoinsta.png" alt="Icono instagram"></a>
+                <a href=""><img src="../Img/iconoinsta.png" alt="Icono instagram"></a>
+            </div>
+            <p>Sodimac - La casa de todos</p>
+        </div>	
 
     </footer>
 

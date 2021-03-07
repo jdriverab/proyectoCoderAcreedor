@@ -14,5 +14,13 @@
     "nodemon": "^2.0.7"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdriverab/proyectoCoderAcreedor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jdriverab/proyectoCoderAcreedor/issues"
+  },
+  "homepage": "https://github.com/jdriverab/proyectoCoderAcreedor#readme"
 }
