@@ -1,17 +1,22 @@
 $color_fuentePrincipal: black;
 $color_fuentePrincipal2: black; // usado en colores especiales de botones
-$fuente_principal: Arial, Helvetica, sans-serif;
+$color_fuenteCreditos: gray;
 
-$tamaño_fuente:13px;
-$tamaño_fuente_titulos:17px;
-$tamaño_fuente_nav: 15px;
+
+$fuente_principal: Arial, Helvetica, sans-serif;
+$fuente_botones: Arial;
+
+$tamaño_fuente:16px;
+$tamaño_fuente_titulos:1.5em;
+$tamaño_fuente_nav: 0.9em;
+$tamaño_fuente_creditos: 0.7em;
 
 $alto_maximo_textos_index: 400px;
 
-$color_background_footer: #aFF8F3;
+$color_background_footer: #0073d0;
 $color_background_form_inscripcion: WHITESMOKE;
 $color_background_tabla: white;
-$color_background:#EFF5F3; // fondos de pagina
+$color_background:#F6FCFC; // fondos de pagina #EFF5F3
 $color_background2: WHITESMOKE; // fondos de botones
 $color_background3: gray; // fondo de botones con hoover
 
