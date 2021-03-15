@@ -1,6 +1,8 @@
 $color_fuentePrincipal: black;
 $color_fuentePrincipal2: black; // usado en colores especiales de botones
 $color_fuenteCreditos: gray;
+$color_botonesCarrousel: black;
+$color_textosCarrousel: black;
 
 
 $fuente_principal: Arial, Helvetica, sans-serif;
@@ -29,3 +31,5 @@ $color_borde_listaTextos: gray;
 
 $nav-link-color: $color_fuentePrincipal; // Para darle color al menu del bootstrap
 $nav-link-font-size: $tamaño_fuente_nav; // Pära darle el tamaño a la letra de la barra NAV
+$carousel-control-color: $color_botonesCarrousel; // Para cambiar colores de botones de carrousel
+$carousel-caption-color: $color_textosCarrousel; // Para cambiar colores de los textos dentro de las fotos en el carrousel
