@@ -7396,7 +7396,7 @@ textarea.form-control-lg {
 
 .estilo {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   text-align: justify;
   padding-left: 5px;
   padding-right: 5px;
@@ -7413,7 +7413,7 @@ textarea.form-control-lg {
 
 .estiloLista {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
@@ -7448,6 +7448,8 @@ body {
     margin: 0.2em auto; }
   .ocultoResponsive {
     display: none; }
+  .ocultoResponsiveTablet {
+    display: none; }
   .mostrarResponsive {
     display: list-item; }
   #ocultoResponsiveIns {
@@ -7461,9 +7463,11 @@ body {
     grid-template-rows: auto;
     grid-column-gap: 5px; }
   .textoFlex50 {
-    max-width: 50%; }
+    max-width: 100%; }
   .ocultoResponsive {
     display: list-item; }
+  .ocultoResponsiveTablet {
+    display: none; }
   .mostrarResponsive {
     display: none; }
   #ocultoResponsiveIns {
@@ -7477,8 +7481,13 @@ body {
     grid-template-rows: auto;
     grid-column-gap: 5px; }
   .textoFlex50 {
-    max-width: 50%; }
+    max-width: 50%;
+    line-height: 150%; }
+    .textoFlex50 li {
+      margin-top: 15px; }
   .ocultoResponsive {
+    display: list-item; }
+  .ocultoResponsiveTablet {
     display: list-item; }
   .mostrarResponsive {
     display: none; }
@@ -7673,7 +7682,7 @@ main {
   padding-left: 3px;
   padding-right: 3px;
   list-style: none;
-  font-size: 16px;
+  font-size: 17px;
   max-height: fit-content; }
 
 footer {
